@@ -223,7 +223,7 @@ header .link-secondary:hover, header .link-secondary:focus, header .link-dark:ho
   margin: 150px 0;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .sm-margin-top-100 {
     margin-top: 100px;
   }
@@ -610,10 +610,17 @@ footer a {
   height: 100%;
   top: -90px;
   left: 0;
-  background: #000;
-  background: linear-gradient(-45deg, #ed1c94, #ffec17);
+  background: #D96704;
   position: absolute;
   transition: 0.5s;
+}
+
+.social-links a.facebook::after {
+  background: #2f55a4;
+}
+
+.social-links a.instagram::after {
+  background: #FF0069;
 }
 
 .social-links a:hover::after {
