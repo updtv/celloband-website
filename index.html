@@ -1,409 +1,274 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="de">
 <head>
-    <title>Die Cello.Band</title>
-    <meta name="description" content="Our first page">
-    <meta name="keywords" content="html tutorial template">
-    <script src="dependencies/bootstrap-5.3.2-dist/js/bootstrap.js" charset="utf-8"></script>
-    <script src="dependencies/jquery-3.7.1.slim.min.js" charset="utf-8"></script>
-    <script src="dependencies/lodash.min.js" charset="utf-8"></script>
-    <script src="dependencies/aos-master/dist/aos.js" charset="utf-8"></script>
-    <script src="dependencies/masonry.pkgd.min.js" async></script>
-    <script src="dependencies/smooth-scrollbar.js"></script>
-    <script src="js/custom.js" charset="utf-8"></script>
-
-    <link rel="stylesheet" href="dependencies/bootstrap-5.3.2-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="dependencies/aos-master/dist/aos.css">
-    <link rel="stylesheet" href="https://use.typekit.net/rmg1tvy.css">
-    <link rel="stylesheet" href="css/custom-back.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cello Band – Cello neu erleben</title>
+  <!-- Schriften werden lokal aus /fonts/ geladen (style.css @font-face) -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
-
 <body>
 
-<header class="header-area">
-    <!-- site-navbar start -->
-    <div class="navbar-area">
-<!--        <div class="container">-->
-            <nav class="site-navbar">
-                <!-- site logo -->
-                                <a href="#home" class="site-logo">
-                                    <img src="img/cello-band-logo.png" style="max-height: 70px;">
-                                </a>
+<!-- ══════════════════════════════════════════
+     NAVIGATION
+     ══════════════════════════════════════════ -->
+<nav>
+  <a href="#hero" class="nav-logo">
+    <img src="images/cello-band-logo.png" alt="Cello Band Logo" />
+  </a>
 
-                <!-- site menu/nav -->
-                <ul>
-                    <li><a href="#about">Über uns</a></li>
-                    <li><a href="#repertoire">Repertoire</a></li>
-                    <li><a href="#news">News</a></li>
-                    <!--                    <li><a href="#referenzen">Referenzen</a></li>-->
-                    <li><a href="#buchung">Buchung</a></li>
-                </ul>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#ueber-uns">Über uns</a></li>
+    <li><a href="#repertoire">Repertoire</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#kontakt" class="nav-cta">Buchung</a></li>
+  </ul>
 
-                <!-- nav-toggler for mobile version only -->
-                <button class="nav-toggler">
-                    <span></span>
-                </button>
-            </nav>
-<!--        </div>-->
-    </div><!-- navbar-area end -->
-</header>
+  <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-<main>
+<!-- ══════════════════════════════════════════
+     MAIN LAYOUT
+     ══════════════════════════════════════════ -->
+<div class="layout">
 
+  <!-- ── Sticky Cello Column ── -->
+  <aside class="cello-col">
+    <div class="cello-wrapper" id="celloWrapper">
 
-    <div class="container-fluid page-wrapper">
-        <!--        <div class="custom-sticker" data-aos-anchor="#repertoire" data-aos="flip-up">-->
-        <!--            <img src="img/cello-band-sticker_about.png">-->
-        <!--        </div>-->
-
-        <div class="sticker-container">
-            <div class="custom-sticker position-1" data-aos="zoom-out" data-aos-duration="400" data-aos-delay="400"
-                 data-aos-anchor="#about">
-                <img src="img/cello-band-sticker_about.png">
-            </div>
-            <div class="custom-sticker position-2" data-aos="zoom-out" data-aos-duration="400" data-aos-delay="400"
-                 data-aos-anchor="#news">
-                <img src="img/cello-band-sticker_media.png">
-            </div>
-            <div class="custom-sticker position-3" data-aos="zoom-out" data-aos-duration="400" data-aos-delay="400"
-                 data-aos-anchor="#repertoire">
-                <img src="img/cello-band-sticker_repertoire.png">
-            </div>
+      <!-- Sticker 1: Über uns -->
+      <a href="#ueber-uns" class="sticker sticker-1" id="sticker1" aria-label="Zur Section: Über uns">
+        <div class="sticker-badge col-orange">
+          <span class="s-emoji">🎻</span>
+          <span class="s-label">Über uns</span>
         </div>
+      </a>
 
-
-        <!--     -----------------------   Intro   ----------------------- -->
-        <div id="intro" class="row vh-100 align-items-center">
-            <div class="col-md-4 col-sm-12" >
-            </div>
-            <div class="px-5 col-md-8 col-sm-12"  data-aos="zoom-out-left">
-                <h1 class="display-5 fw-bold lh-1 mb-3">Willkommen bei der Cello Band – Klassik <strong>&</strong>
-                    Cross-Over
-                </h1>
-                <p>Quickly design and customize responsive mobile-first sites with Bootstrap, the
-                    world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
-                    responsive grid system, extensive prebuilt components, and
-                    powerful JavaScript plugins.</p>
-                <a class="cta cta-2" href="#about">
-                    <span>Mehr erfahren</span>
-                    <svg width="15px" height="10px" viewBox="0 0 13 10">
-                        <path d="M1,5 L11,5"></path>
-                        <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                </a>
-            </div>
+      <!-- Sticker 2: Info -->
+      <a href="#info" class="sticker sticker-2" id="sticker2" aria-label="Zur Section: Info">
+        <div class="sticker-badge col-mint">
+          <span class="s-emoji">🏆</span>
+          <span class="s-label">Band</span>
         </div>
+      </a>
 
-
-        <!--     -----------------------   About   ----------------------- -->
-        <div id="about" class="row third-section l-margin-y-150 py-5 align-items-center">
-            <div class="col-md-4 col-sm-12" >
-            </div>
-            <div class="px-5 col-md-8 col-sm-12"  data-aos="zoom-out-left">
-                <h2 class="display-5 fw-bold lh-1 mb-3">Über uns</h2>
-                <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item mb-2">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseOne" aria-expanded="true"
-                                    aria-controls="flush-collapseOne">
-                                <i class="bi-flag"></i> Gründung
-                            </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse show"
-                             data-bs-parent="#accordionFlushExample" style="">
-                            <div class="accordion-body">Die Cello.Band wurde im Frühjahr 2019 von vier Cellisten des
-                                KIT-Sinfonieorchesters in
-                                Karlsruhe gegründet. Erste Auftritte fanden im selben Jahr bei der Campus-Klassik-Bühne,
-                                dem
-                                Uni-Fest am KIT und dem Chaos Computer Club in Karlsruhe statt. 2020 wurde die Besetzung
-                                um
-                                zwei weitere feste Mitglieder aus dem KIT-Sinfonieorchester ergänzt.
-                                <br>
-                                <br>
-                                Durch berufsbedingten Wegzug einiger Musiker erhielt das Ensemble im Herbst 2023 erneut
-                                Zuwachs, aktuell besteht die Cello.Band aus fünf CellistInnen, drei davon gehören zu den
-                                Gründungsmitgliedern.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item mb-2">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                    aria-controls="flush-collapseTwo">
-                                <i class="bi-music-note-list"></i> Was wir spielen
-                            </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                             data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Seit Ihrem Bestehen erarbeitet sich die Cello.Band fortwährend
-                                ein umfangreiches und breit
-                                gefächertes Repertoire. Auf dem Programm stehen neben klassische Werke aller Epochen
-                                lateinamerikanische Tänze
-                                sowie Arrangements aus Bereichen der Film-, Rock- und Popmusik.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                    aria-controls="flush-collapseThree">
-                                <i class="bi-calendar2-heart"></i> Auftritte
-                            </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse"
-                             data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Seit 2020 tritt die Cello.Band sowohl bei öffentlichen als auch
-                                bei diversen privaten
-                                Veranstaltungen,
-                                z.B. Hauskonzerten und Hochzeiten, im Karlsruher Raum auf. Dazu gehört unter anderem die
-                                regelmäßige
-                                Beteiligung an der musikalischen Gestaltung der Gottesdienste in der evangelischen
-                                Stadtkirche
-                                Karlsruhe.<br>
-                                <br> In den Sommermonaten verlagert das Ensemble seine musikalische Aktivität
-                                gerne auf die
-                                Straße
-                                und ist bevorzugt vor dem Karlsruher Schloss oder dem Kammertheater Karlsruhe zu finden.
-                                Auf mehrtägigen Straßenmusik-Trips waren die Musiker aber auch bereits in Zürich,
-                                München und
-                                Baden-Baden zu hören.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--                <div class="fact-label">Ihren offiziellen Namen trägt die Cello.Band seit 2021.</div>-->
-            </div>
+      <!-- Sticker 3: Repertoire -->
+      <a href="#repertoire" class="sticker sticker-3" id="sticker3" aria-label="Zur Section: Repertoire">
+        <div class="sticker-badge col-yellow">
+          <span class="s-emoji">🎵</span>
+          <span class="s-label">Musik</span>
         </div>
+      </a>
 
-
-        <!--     -----------------------   Repertoire   ----------------------- -->
-        <div id="repertoire" class="row secondary-section l-margin-y-150 py-5 align-items-center">
-            <div class="col-md-4 col-sm-12" >
-            </div>
-            <div class="px-5 col-md-8 col-sm-12"  data-aos="zoom-out-left">
-                <h2 class="display-5 fw-bold lh-1 mb-3">Repertoire</h2>
-                <p>Von klassischen Meisterwerken bis zu modernen Klängen - unsere musikalische Reise vereint
-                    Leidenschaft und Virtuosität.</p>
-
-
-                <div class="row mt-5" data-masonry="{&quot;percentPosition&quot;: true }"
-                     style="position: relative; height: 714px;">
-                    <div class="col-sm-6 col-lg-6 mb-4" style="position: absolute; left: 0%; top: 0px;">
-                        <div class="card">
-                            <div class="card-img-top" style="background-image: url('img/cello-band-1.jpg');"></div>
-                            <div class="card-body">
-                                <h3 class="card-title">Klassik</h3>
-                                <p class="card-text">Virtuosität und Leidenschaft</p>
-                                <p class="card-text"><a href="#"><small>Demo anhören</small></a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-6 mb-4" style="position: absolute; left: 33.3333%; top: 171px;">
-                        <div class="card text-bg-third text-white text-center p-3">
-                            <figure class="mb-0">
-                                <blockquote class="blockquote">
-                                    <p>A well-known quote, contained in a blockquote element.</p>
-                                </blockquote>
-                                <figcaption class="blockquote-footer mb-0 text-white">
-                                    Someone famous in <cite title="Source Title">Source Title</cite>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-6 mb-4" style="position: absolute; left: 66.6667%; top: 0px;">
-                        <div class="card">
-                            <div class="card-img-top" style="background-image: url('img/cello-band-3.jpg');"></div>
-                            <div class="card-body">
-                                <h3 class="card-title">Filmmusik</h3>
-                                <p class="card-text">Cello-Geschichten für die Leinwand</p>
-                                <p class="card-text"><a href="#"><small>Demo anhören</small></a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-6 mb-4" style="position: absolute; left: 33.3333%; top: 171px;">
-                        <div class="card text-bg-third text-white text-center p-3">
-                            <figure class="mb-0">
-                                <blockquote class="blockquote">
-                                    <p>A well-known quote, contained in a blockquote element.</p>
-                                </blockquote>
-                                <figcaption class="blockquote-footer mb-0 text-white">
-                                    Someone famous in <cite title="Source Title">Source Title</cite>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-6 mb-4" style="position: absolute; left: 66.6667%; top: 0px;">
-                        <div class="card">
-                            <div class="card-img-top" style="background-image: url('img/cello-band-5.jpg');">
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title">Tango</h3>
-                                <p class="card-text">Leidenschaft in jedem Ton</p>
-                                <p class="card-text"><a href="#"><small>Demo anhören</small></a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-6 mb-4" style="position: absolute; left: 66.6667%; top: 0px;">
-                        <div class="card">
-                            <div class="card-img-top" style="background-image: url('img/cello-band-4.jpg');">
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title">Rock</h3>
-                                <p class="card-text">Kraftvolle Riffs, unverkennbare Beats</p>
-                                <p class="card-text"><a href="#"><small>Demo anhören</small></a></p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <!--                <div id="carouselExampleIndicatorsf" class="carousel slide d-flex">-->
-                <!--                    <div class="carousel-indicators">-->
-                <!--                        <button type="button" data-bs-target="#carouselExampleIndicatorsf" data-bs-slide-to="0"-->
-                <!--                                class="active" aria-current="true" aria-label="Slide 1">Rock <i-->
-                <!--                                class="bi bi-arrow-right"></i></button>-->
-                <!--                        <button type="button" data-bs-target="#carouselExampleIndicatorsf" data-bs-slide-to="1"-->
-                <!--                                aria-label="Slide 2">Pop<i class="bi bi-arrow-right"></i></button>-->
-                <!--                        <button type="button" data-bs-target="#carouselExampleIndicatorsf" data-bs-slide-to="2"-->
-                <!--                                aria-label="Slide 3">Klassik <i class="bi bi-arrow-right"></i></button>-->
-                <!--                    </div>-->
-                <!--                    <div class="carousel-inner">-->
-                <!--                        <div class="carousel-item active">-->
-                <!--                            <img src="https://codingyaar.com/wp-content/uploads/donut.jpg" class="d-block" alt="">-->
-
-                <!--                        </div>-->
-                <!--                        <div class="carousel-item">-->
-                <!--                            <img src="https://codingyaar.com/wp-content/uploads/donut.jpg" class="d-block" alt="">-->
-
-                <!--                        </div>-->
-                <!--                        <div class="carousel-item">-->
-                <!--                            <img src="https://codingyaar.com/wp-content/uploads/donut.jpg" class="d-block" alt="">-->
-
-                <!--                        </div>-->
-                <!--                    </div>-->
-                <!--                </div>-->
-
-            </div>
+      <!-- Sticker 4: News -->
+      <a href="#news" class="sticker sticker-4" id="sticker4" aria-label="Zur Section: News">
+        <div class="sticker-badge col-black">
+          <span class="s-emoji">📰</span>
+          <span class="s-label">News</span>
         </div>
+      </a>
 
-
-        <!--     -----------------------   News   ----------------------- -->
-        <div id="news" class="row forth-section l-margin-y-150 py-5">
-            <div class="col-md-4 col-sm-12" >
-            </div>
-            <div class="px-5 col-md-8 col-sm-12"  data-aos="zoom-out-left">
-                <h2 class="display-5 fw-bold lh-1 mb-3">News</h2>
-                <p>Quickly design and customize responsive mobile-first sites with Bootstrap, the
-                    world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
-                    responsive grid system, extensive prebuilt components, and
-                    powerful JavaScript plugins.</p>
-                <!--                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newsmodal1">sda</button>-->
-                <!--                Content will be injected with JS-->
-                <div id="news-container"></div>
-            </div>
+      <!-- Sticker 5: Kontakt -->
+      <a href="#kontakt" class="sticker sticker-5" id="sticker5" aria-label="Zur Section: Kontakt">
+        <div class="sticker-badge col-red">
+          <span class="s-emoji">📅</span>
+          <span class="s-label">Kontakt</span>
         </div>
+      </a>
 
-        <!--     -----------------------   Buchung   ----------------------- -->
-        <div id="buchung" class="row primary-section mb-0 py-5 align-items-center">
-            <div class="col-md-4 col-sm-12">
-            </div>
-            <div class="col-md-8 px-5 col-sm-12" data-aos="zoom-out-left">
-                <h2 class="display-5 fw-bold lh-1 mb-3">Buchung</h2>
-                <p>Quickly design and customize responsive mobile-first sites with Bootstrap, the
-                    world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
-                    responsive grid system, extensive prebuilt components, and
-                    powerful JavaScript plugins.</p>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><i class="bi-envelope"></i> EMail </li>
-                    <li class="mb-2"><i class="bi-facebook"></i> Facebook </li>
-                    <li class="mb-2"><i class="bi-instagram"></i> Instagram </li>
-                </ul>
-                <!--                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newsmodal1">sda</button>-->
-                <!--                Content will be injected with JS-->
-                <div id="news-container"></div>
-            </div>
-        </div>
-
-
-        <footer class="d-flex flex-wrap justify-content-end align-items-center py-3 my-4">
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3">© 2024 Cello Band</li>
-                <li class="ms-3"><a href="https://www.facebook.com/die.cello.band" target="_blank"><i class="bi-facebook"></i></a></li>
-                <li class="ms-3"><a href="https://www.instagram.com/die.cello.band/" target="_blank"><i class="bi-instagram"></i></a></li>
-            </ul>
-        </footer>
+      <!-- Real cello case photo -->
+      <img
+        src="images/cello-kasten-single.png"
+        alt="Weißer Cello-Koffer"
+        class="cello-img"
+      />
     </div>
+  </aside>
 
+  <!-- ── Page Sections ── -->
+  <main class="main-content">
 
-    <!--    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">-->
-    <!--        <div class="item" data-aos="fade-up">1</div>-->
-    <!--        <div class="item" data-aos="fade-down">2</div>-->
-    <!--        <div class="item" data-aos="fade-right">3</div>-->
-    <!--        <div class="item" data-aos="zoom-out-left">4</div>-->
+    <!-- ── HERO ── -->
+    <section id="hero">
+      <div class="hero-bg-circle c1"></div>
+      <div class="hero-bg-circle c2"></div>
+      <div class="hero-bg-circle c3"></div>
+      <div class="hero-content">
+        <h1>Die Cello Band –<br/>Cello neu erleben</h1>
+        <p>
+          Begleitet uns auf einer musikalischen Reise voller Innovation und Kreativität
+          durch klassische und populäre Stücke. Wir schaffen eine frische, moderne Interpretation
+          von Cello-Musik – und fusionieren klassische Klänge mit zeitgenössischer Energie,
+          die das Publikum in ihren Bann zieht. Von Barock bis Pop, von Stille bis Begeisterung.
+        </p>
+        <a href="#ueber-uns" class="btn-primary">Mehr erfahren</a>
+      </div>
+    </section>
 
-    <!--        <div class="item" data-aos="zoom-in">5</div>-->
-    <!--        <div class="item" data-aos="zoom-out">6</div>-->
-
-    <!--        <div class="item" data-aos="slide-up">7</div>-->
-
-    <!--        <div class="item" data-aos="flip-up">8</div>-->
-    <!--        <div class="item" data-aos="flip-down">9</div>-->
-    <!--        <div class="item" data-aos="flip-right">10</div>-->
-    <!--        <div class="item" data-aos="flip-left">11</div>-->
-
-    <!--    </div>-->
-    <!-- Modal -->
-    <div id="modal-insert-container"></div>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
+    <!-- ── ÜBER UNS ── -->
+    <section id="ueber-uns">
+      <div class="ueber-grid">
+        <div>
+          <h2 class="fade-up">Über uns</h2>
+          <p class="fade-up">
+            Die Cello Band vereint vier leidenschaftliche Musikerinnen und Musiker,
+            die gemeinsam die Grenzen des klassischen Cellospiels neu definieren.
+            Unsere Musik verbindet Tradition mit Moderne – von Bach bis Pop,
+            von kammermusikalischer Stille bis hin zu mitreißenden Arrangements.
+          </p>
+          <p class="fade-up">
+            Gegründet mit einer gemeinsamen Vision: Cello-Musik zugänglich,
+            aufregend und unvergesslich zu machen – für jedes Publikum,
+            auf jeder Bühne, in jedem Moment.
+          </p>
         </div>
+        <div class="band-photo fade-up" style="position:relative;">
+          <img src="images/cello-band-complete.png" alt="Die Cello Band" style="width:100%;height:100%;object-fit:cover;border-radius:1.2rem;" />
+          <div class="dot-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── INFO CARDS ── -->
+    <section id="info">
+      <div class="cards-grid">
+
+        <!-- Card 1: Gründung — Dreieck (orange) -->
+        <div class="info-card fade-up">
+          <div class="info-card-body">
+            <h3>Gründung</h3>
+            <p>Die Cello Band wurde im Frühjahr 2019 von vier Cellisten des KIT-Sinfonieorchesters in Karlsruhe gegründet. Erste Auftritte fanden im selben Jahr bei der Campus-Klassik-Bühne statt und begeisterten das Publikum.</p>
+            <div class="info-card-more" hidden>
+              <p>Was als lockeres Ensembleprojekt begann, entwickelte sich rasch zu einer festen Größe in der Karlsruher Musikszene. Heute zählt die Band zu den bekanntesten Kammermusikformationen der Region und tritt regelmäßig auf renommierten Bühnen auf.</p>
+            </div>
+            <button class="card-link info-card-toggle" aria-expanded="false">
+              Weiterlesen <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: Was wir spielen — Kreis (grün) -->
+        <div class="info-card fade-up">
+          <div class="info-card-body">
+            <h3>Was wir spielen</h3>
+            <p>Von Bachs Cello-Suiten über Filmmusik bis hin zu Pop-Arrangements – unser Repertoire ist so vielfältig wie unser Publikum. Wir bringen Klassik zum Strahlen und modernen Songs eine neue Tiefe.</p>
+            <div class="info-card-more" hidden>
+              <p>Ob Beethoven-Quartett, Piazzolla-Tango oder Metallica-Ballade – wir arrangieren jedes Stück eigens für unser Cello-Ensemble. Das Ergebnis: ein unverwechselbarer Klang, der Grenzen zwischen den Genres spielend überwindet.</p>
+            </div>
+            <button class="card-link info-card-toggle" aria-expanded="false">
+              Weiterlesen <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3: Auftritte — Raute (gelb) -->
+        <div class="info-card fade-up">
+          <div class="info-card-body">
+            <h3>Auftritte</h3>
+            <p>Vom intimen Kammerkonzert bis zur Hochzeitsgala – wir gestalten unvergessliche musikalische Momente. Flexible Besetzung und ein breites Repertoire machen uns für jeden Anlass buchbar.</p>
+            <div class="info-card-more" hidden>
+              <p>Wir treten als Duo, Trio oder Quartett auf – je nach Veranstaltungsgröße und Wunsch. Unsere Erfahrung reicht von Unternehmensevents über Hochzeiten bis hin zu öffentlichen Konzertveranstaltungen in ganz Baden-Württemberg.</p>
+            </div>
+            <button class="card-link info-card-toggle" aria-expanded="false">
+              Weiterlesen <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── REPERTOIRE ── -->
+    <section id="repertoire">
+      <h2 class="fade-up">Repertoire</h2>
+      <p class="section-lead fade-up">
+        Vom Klassiker bis zum Popsong – unser musikalisches Spektrum ist vielfältig,
+        leidenschaftlich und unvergesslich.
+      </p>
+      <div class="tab-bar" id="tabBar">
+        <button class="tab-btn active" data-filter="klassik">Klassik</button>
+        <button class="tab-btn" data-filter="filmmusik">Filmmusik</button>
+        <button class="tab-btn" data-filter="pop">Pop &amp; Tango</button>
+        <button class="tab-btn" data-filter="rock">Rock</button>
+      </div>
+      <div class="repertoire-grid" id="repertoireGrid">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- ── NEWS ── -->
+    <section id="news">
+      <h2 class="fade-up">News</h2>
+      <p class="section-lead fade-up">
+        Von neuen Konzerten bis zu spannenden Projekten –
+        hier findest du alle aktuellen Neuigkeiten rund um die Cello Band.
+      </p>
+      <div class="news-filter-bar" id="newsFilterBar">
+        <!-- Rendered by JS -->
+      </div>
+      <div class="news-list" id="newsList">
+        <!-- Rendered by JS from newsData -->
+      </div>
+    </section>
+
+    <!-- ── KONTAKT ── -->
+    <section id="kontakt">
+      <h2 class="fade-up">Kontakt &amp; Buchung</h2>
+      <p class="section-lead fade-up">
+        Ihr möchtet uns für euer Event buchen oder habt Fragen?
+        Wir freuen uns auf eure Nachricht!
+      </p>
+      <div class="kontakt-cards fade-up" id="kontaktCards">
+        <!-- Rendered by JS from kontaktData in data.js -->
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  &copy; 2026 Cello Band Karlsruhe &nbsp;·&nbsp;
+  <a href="impressum-datenschutz.html">Impressum & Datenschutz</a>
+</footer>
+
+<!-- ══════════════════════════════════════════
+     NEWS DIALOG / MODAL
+     ══════════════════════════════════════════ -->
+<div class="dialog-overlay" id="dialogOverlay" role="dialog" aria-modal="true" aria-labelledby="dialogTitle">
+  <div class="dialog-box" id="dialogBox">
+    <button class="dialog-close-top" id="dialogCloseTop" aria-label="Schließen">✕</button>
+    <div id="dialogImageArea"></div>
+    <div class="dialog-body">
+      <div class="dialog-date" id="dialogDate"></div>
+      <h2 class="dialog-title" id="dialogHeadline"></h2>
+      <div class="dialog-text" id="dialogText"></div>
     </div>
+    <div class="dialog-footer" id="dialogFooter">
+      <div id="dialogCtaArea"></div>
+      <button class="dialog-close" id="dialogCloseBottom" aria-label="Schließen">✕</button>
+    </div>
+  </div>
+</div>
 
+<!-- ══════════════════════════════════════════
+     MEDIA DIALOG (YouTube / Audio)
+     ══════════════════════════════════════════ -->
+<div class="dialog-overlay" id="mediaDialogOverlay" role="dialog" aria-modal="true" aria-label="Musikstück abspielen">
+  <div class="dialog-box media-dialog-box" id="mediaDialogBox">
+    <button class="dialog-close-top" id="mediaDialogClose" aria-label="Schließen">✕</button>
+    <div id="mediaDialogContent"></div>
+    <div class="dialog-body">
+      <h2 class="dialog-title" id="mediaDialogTitle"></h2>
+      <div class="dialog-text" id="mediaDialogMeta"></div>
+    </div>
+  </div>
+</div>
 
-</main>
-
-<script>
-    console.log('init')
-    AOS.init({
-        duration: 600,
-    })
-
-    const options = {
-        damping: 0.1,
-        thumbMinSize: 20,
-        renderByPixels: !('ontouchstart' in document),
-        alwaysShowTracks: false,
-        continuousScrolling: true,
-    };
-    var Scrollbar = window.Scrollbar;
-
-    Scrollbar.initAll(document.querySelector('#my-scrollbar'), options);
-</script>
+<script src="data.js"></script>
+<script src="main.js"></script>
 </body>
-
 </html>
